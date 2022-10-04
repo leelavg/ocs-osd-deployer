@@ -26,12 +26,12 @@ import (
 var resourceRequirements = map[string]corev1.ResourceRequirements{
 	"mds": {
 		Limits: corev1.ResourceList{
-			"cpu":    resource.MustParse("3000m"),
-			"memory": resource.MustParse("8Gi"),
+			"cpu":    resource.MustParse("1500m"),
+			"memory": resource.MustParse("8112Mi"),
 		},
 		Requests: corev1.ResourceList{
-			"cpu":    resource.MustParse("1000m"),
-			"memory": resource.MustParse("8Gi"),
+			"cpu":    resource.MustParse("1500m"),
+			"memory": resource.MustParse("8112Mi"),
 		},
 	},
 	"mgr": {
@@ -46,31 +46,31 @@ var resourceRequirements = map[string]corev1.ResourceRequirements{
 	},
 	"mon": {
 		Limits: corev1.ResourceList{
-			"cpu":    resource.MustParse("1000m"),
+			"cpu":    resource.MustParse("950m"),
 			"memory": resource.MustParse("2Gi"),
 		},
 		Requests: corev1.ResourceList{
-			"cpu":    resource.MustParse("1000m"),
+			"cpu":    resource.MustParse("950m"),
 			"memory": resource.MustParse("2Gi"),
 		},
 	},
 	"sds": {
 		Limits: corev1.ResourceList{
-			"cpu":    resource.MustParse("2000m"),
-			"memory": resource.MustParse("7Gi"),
+			"cpu":    resource.MustParse("1750m"),
+			"memory": resource.MustParse("5800Mi"),
 		},
 		Requests: corev1.ResourceList{
-			"cpu":    resource.MustParse("1000m"),
-			"memory": resource.MustParse("7Gi"),
+			"cpu":    resource.MustParse("1750m"),
+			"memory": resource.MustParse("5800Mi"),
 		},
 	},
 	"prometheus": {
 		Limits: corev1.ResourceList{
-			"cpu":    resource.MustParse("1"),
+			"cpu":    resource.MustParse("450m"),
 			"memory": resource.MustParse("250Mi"),
 		},
 		Requests: corev1.ResourceList{
-			"cpu":    resource.MustParse("1"),
+			"cpu":    resource.MustParse("450m"),
 			"memory": resource.MustParse("250Mi"),
 		},
 	},
@@ -117,11 +117,11 @@ var resourceRequirements = map[string]corev1.ResourceRequirements{
 	"crashcollector": {
 		Limits: corev1.ResourceList{
 			"cpu":    resource.MustParse("50m"),
-			"memory": resource.MustParse("80Mi"),
+			"memory": resource.MustParse("60Mi"),
 		},
 		Requests: corev1.ResourceList{
 			"cpu":    resource.MustParse("50m"),
-			"memory": resource.MustParse("80Mi"),
+			"memory": resource.MustParse("60Mi"),
 		},
 	},
 	"csi-provisioner": {
