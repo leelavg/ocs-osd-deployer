@@ -26,12 +26,12 @@ import (
 var resourceRequirements = map[string]corev1.ResourceRequirements{
 	"mds": {
 		Limits: corev1.ResourceList{
-			"cpu":    resource.MustParse("1500m"),
-			"memory": resource.MustParse("8112Mi"),
+			"cpu":    resource.MustParse("3000m"),
+			"memory": resource.MustParse("8Gi"),
 		},
 		Requests: corev1.ResourceList{
-			"cpu":    resource.MustParse("1500m"),
-			"memory": resource.MustParse("8112Mi"),
+			"cpu":    resource.MustParse("3000m"),
+			"memory": resource.MustParse("8Gi"),
 		},
 	},
 	"mgr": {
@@ -46,22 +46,22 @@ var resourceRequirements = map[string]corev1.ResourceRequirements{
 	},
 	"mon": {
 		Limits: corev1.ResourceList{
-			"cpu":    resource.MustParse("950m"),
+			"cpu":    resource.MustParse("1000m"),
 			"memory": resource.MustParse("2Gi"),
 		},
 		Requests: corev1.ResourceList{
-			"cpu":    resource.MustParse("950m"),
+			"cpu":    resource.MustParse("1000m"),
 			"memory": resource.MustParse("2Gi"),
 		},
 	},
 	"sds": {
 		Limits: corev1.ResourceList{
-			"cpu":    resource.MustParse("1750m"),
-			"memory": resource.MustParse("5800Mi"),
+			"cpu":    resource.MustParse("2000m"),
+			"memory": resource.MustParse("7Gi"),
 		},
 		Requests: corev1.ResourceList{
-			"cpu":    resource.MustParse("1750m"),
-			"memory": resource.MustParse("5800Mi"),
+			"cpu":    resource.MustParse("2000m"),
+			"memory": resource.MustParse("7Gi"),
 		},
 	},
 	"prometheus": {
@@ -117,11 +117,11 @@ var resourceRequirements = map[string]corev1.ResourceRequirements{
 	"crashcollector": {
 		Limits: corev1.ResourceList{
 			"cpu":    resource.MustParse("50m"),
-			"memory": resource.MustParse("60Mi"),
+			"memory": resource.MustParse("80Mi"),
 		},
 		Requests: corev1.ResourceList{
 			"cpu":    resource.MustParse("50m"),
-			"memory": resource.MustParse("60Mi"),
+			"memory": resource.MustParse("80Mi"),
 		},
 	},
 	"csi-provisioner": {

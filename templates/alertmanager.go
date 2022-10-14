@@ -32,7 +32,7 @@ var AlertmanagerTemplate = promv1.Alertmanager{
 		Resources: utils.GetResourceRequirements("alertmanager"),
 		TopologySpreadConstraints: []v1.TopologySpreadConstraint{
 			{
-				MaxSkew: 2,
+				MaxSkew: 1,
 				LabelSelector: &metav1.LabelSelector{
 					MatchLabels: map[string]string{
 						"app.kubernetes.io/name": "alertmanager",
